@@ -123,6 +123,8 @@ php artisan serve
 
 # La aplicación estará disponible en: http://localhost:8000
 ```
+### Ruta de Pruebas para QR
+http://tu-dominio.com/verificar/(Numero de Registro a verificar)
 
 ## Configuración Adicional
 
