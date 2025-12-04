@@ -41,13 +41,7 @@ php -m | grep gd
 
 ## Instalación
 
-### 1. Clonar el Repositorio
-```bash
-git clone [URL_DEL_REPOSITORIO]
-cd CapacitacionInterna
-```
-
-### 2. Instalar Dependencias PHP
+### 1. Instalar Dependencias PHP
 ```bash
 # Verificar versión de PHP
 php --version
@@ -56,7 +50,7 @@ php --version
 composer install --no-dev --optimize-autoloader
 ```
 
-### 3. Configurar Variables de Entorno
+### 2. Configurar Variables de Entorno
 ```bash
 # Copiar archivo de configuración
 cp .env.example .env
@@ -67,7 +61,7 @@ php artisan key:generate
 
 **Editar el archivo `.env` con tus datos:**
 ```env
-APP_NAME="Plataforma de Capacitación"
+APP_NAME="Plataforma "
 APP_ENV=production
 APP_DEBUG=false
 APP_URL=http://localhost
@@ -80,7 +74,7 @@ DB_USERNAME=cap_docente
 DB_PASSWORD=des_academico
 ```
 
-### 4. Configurar Base de Datos
+### 3. Configurar Base de Datos
 ```bash
 # Crear base de datos y usuario MySQL
 mysql -u root -p
@@ -92,7 +86,7 @@ FLUSH PRIVILEGES;
 EXIT;
 ```
 
-### 5. Ejecutar Migraciones
+### 4. Ejecutar Migraciones
 ```bash
 # Crear tablas en la base de datos
 php artisan migrate --force
@@ -101,7 +95,7 @@ php artisan migrate --force
 php artisan db:seed
 ```
 
-### 6. Instalar Dependencias Frontend
+### 5. Instalar Dependencias Frontend
 ```bash
 # Instalar dependencias Node.js
 npm install
@@ -110,7 +104,7 @@ npm install
 npm run build
 ```
 
-### 7. Configurar Permisos y Storage
+### 6. Configurar Permisos y Storage
 ```bash
 # Crear enlace simbólico para archivos
 php artisan storage:link
@@ -122,7 +116,7 @@ chmod -R 775 bootstrap/cache
 # En Windows: Dar permisos completos a las carpetas storage y bootstrap/cache
 ```
 
-### 8. Iniciar la Aplicación
+### 7. Iniciar la Aplicación
 ```bash
 # Iniciar servidor de desarrollo
 php artisan serve
